@@ -1,0 +1,44 @@
+# Model files and checkpoints
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+tokenizer.json
+tokenizer.model
+tokenizer_config.json
+special_tokens_map.json
+chat_template.jinja
+adapter_config.json
+
+# Training outputs
+sft_results/
+reward_model_output/
+offload/
+
+# Tokenized datasets (regenerated from source)
+data/tokenized_parking_permit_dataset/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.eggs/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

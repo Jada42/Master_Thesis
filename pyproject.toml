@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rlhf-transparency-alignment"
+version = "1.0.0"
+description = "RLHF for public value alignment in government LLMs — Master's thesis"
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.pyright]
+typeCheckingMode = "standard"
+reportMissingTypeStubs = false
