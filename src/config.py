@@ -71,6 +71,33 @@ RM_WEIGHT_DECAY: float = 0.01
 RM_GRADIENT_CLIP: float = 1.0
 
 # ---------------------------------------------------------------------------
+# PPO / Constitutional AI training (Optuna-optimized, trial 43)
+# ---------------------------------------------------------------------------
+PPO_BATCH_SIZE: int = 6
+PPO_MINI_BATCH_SIZE: int = 3
+PPO_LEARNING_RATE: float = 9.391494524751205e-06
+PPO_TARGET_KL: float = 0.021602267145796005
+PPO_STEPS: int = 500
+PPO_EPOCHS: int = 5
+PPO_INIT_KL_COEF: float = 0.09327372581520726
+PPO_GAMMA: float = 0.9789438458465525
+PPO_VF_COEF: float = 0.36436016003108607
+
+# Optimized reward-component weights
+CONSTITUTIONAL_WEIGHT: float = 0.81   # Primary transparency driver
+REWARD_MODEL_WEIGHT: float = 0.111    # Learned scorer (secondary)
+COHERENCE_WEIGHT: float = 0.079       # Semantic coherence fine-tuning
+CONSTITUTIONAL_LR: float = 1.7169751284913331e-06
+
+# Constitutional iteration control
+CONVERGENCE_THRESHOLD: float = 0.12701580628504341
+MAX_CONSTITUTIONAL_ITERATIONS: int = 4
+
+# Coherence module
+COHERENCE_EMBEDDING_MODEL: str = "all-MiniLM-L6-v2"
+COHERENCE_HIDDEN_DIM: int = 512
+
+# ---------------------------------------------------------------------------
 # File paths
 # ---------------------------------------------------------------------------
 SFT_DATASET_JSONL: Path = DATA_DIR / "parking_permit_sft_dataset.jsonl"
